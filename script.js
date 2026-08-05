@@ -305,3 +305,106 @@ boutonsCategories.forEach(function(bouton) {
 afficherProduits();
 
 mettreAJourPanier();
+// =========================
+
+// FENÊTRE PANIER
+
+// =========================
+
+const boutonPanier =
+
+    document.querySelector(".panier");
+
+const fenetrePanier =
+
+    document.getElementById("fenetrePanier");
+
+const fermerPanier =
+
+    document.getElementById("fermerPanier");
+
+const contenuPanier =
+
+    document.getElementById("contenuPanier");
+
+const totalPanier =
+
+    document.getElementById("totalPanier");
+
+// Ouvrir
+
+boutonPanier.addEventListener("click", function() {
+
+    afficherPanier();
+
+    fenetrePanier.style.display = "flex";
+
+});
+
+// Fermer
+
+fermerPanier.addEventListener("click", function() {
+
+    fenetrePanier.style.display = "none";
+
+});
+
+// Cliquer à l'extérieur
+
+window.addEventListener("click", function(event) {
+
+    if (event.target === fenetrePanier) {
+
+        fenetrePanier.style.display = "none";
+
+    }
+
+});
+
+// Affichage du panier
+
+function afficherPanier() {
+
+    contenuPanier.innerHTML = "";
+
+    let total = 0;
+
+    if (panier.length === 0) {
+
+        contenuPanier.innerHTML =
+
+            "<p>Votre panier est vide.</p>";
+
+    }
+
+    panier.forEach(function(produit) {
+
+        total += produit.prix;
+
+        contenuPanier.innerHTML += `
+
+            <div class="ligne-panier">
+
+                <span>${produit.nom}</span>
+
+                <strong>
+
+                    ${produit.prix.toLocaleString("fr-FR")} FCFA
+
+                </strong>
+
+            </div>
+
+        `;
+
+    });
+
+    totalPanier.textContent =
+
+        "Total : " +
+
+        total.toLocaleString("fr-FR") +
+
+        " FCFA";
+
+}
