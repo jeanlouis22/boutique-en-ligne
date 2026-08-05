@@ -121,37 +121,29 @@ function afficherProduits(liste = produits) {
 
                 </div>
 
-                <div class="actions">
+        <div class="actions">
 
-                    <button
+    <button
 
-    class="voir-produit"
+        class="voir-produit"
 
-    onclick="voirProduit(${produit.id})"
+        onclick="voirProduit(${produit.id})">
 
->
+        👁️ Voir
 
- <button
+    </button>
 
-    class="voir-produit"
+    <button
 
-    onclick="voirProduit(${produit.id})"
+        class="bouton-produit"
 
->
+        onclick="ajouterAuPanier(${produit.id})">
 
-    👁️ Voir
+        🛒 Ajouter
 
-</button>
+    </button>
 
-                        onclick="ajouterAuPanier(${produit.id})"
-
-                    >
-
-                        🛒 Ajouter
-
-                    </button>
-
-                </div>
+</div>
 
             </div>
 
