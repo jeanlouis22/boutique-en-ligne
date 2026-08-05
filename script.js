@@ -374,9 +374,7 @@ function afficherPanier() {
 
     if (panier.length === 0) {
 
-        contenuPanier.innerHTML =
-
-            "<p>Votre panier est vide.</p>";
+        contenuPanier.innerHTML = "<p>Votre panier est vide.</p>";
 
     }
 
@@ -390,11 +388,7 @@ function afficherPanier() {
 
                 <span>${produit.nom}</span>
 
-                <strong>
-
-                    ${produit.prix.toLocaleString("fr-FR")} FCFA
-
-                </strong>
+                <strong>${produit.prix.toLocaleString("fr-FR")} FCFA</strong>
 
             </div>
 
@@ -411,3 +405,59 @@ function afficherPanier() {
         " FCFA";
 
 }
+
+const envoyerCommande = document.getElementById("envoyerCommande");
+
+envoyerCommande.addEventListener("click", function () {
+
+    if (panier.length === 0) {
+
+        alert("Votre panier est vide.");
+
+        return;
+
+    }
+
+    const nom = document.getElementById("nomClient").value;
+
+    const telephone = document.getElementById("telephoneClient").value;
+
+    const adresse = document.getElementById("adresseClient").value;
+
+    let message = "🛒 *Nouvelle commande*%0A%0A";
+
+    message += "👤 Nom : " + nom + "%0A";
+
+    message += "📞 Téléphone : " + telephone + "%0A";
+
+    message += "📍 Adresse : " + adresse + "%0A%0A";
+
+    let total = 0;
+
+    panier.forEach(function(produit){
+
+        total += produit.prix;
+
+        message += "• " + produit.nom + " - " +
+
+        produit.prix.toLocaleString("fr-FR") +
+
+        " FCFA%0A";
+
+    });
+
+    message += "%0A💰 Total : " +
+
+    total.toLocaleString("fr-FR") +
+
+    " FCFA";
+
+    window.open(
+
+        "https://wa.me/2250596266649?text=" + message,
+
+        "_blank"
+
+    );
+
+})
