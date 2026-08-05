@@ -594,3 +594,112 @@ footer {
     text-align:right;
 
 }
+/* =========================
+
+   NOUVELLES CARTES PRODUITS
+
+========================= */
+
+.produit-image{
+
+    position:relative;
+
+}
+
+.produit-image img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+}
+
+.favori{
+
+    position:absolute;
+
+    top:10px;
+
+    right:10px;
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+.note{
+
+    color:#f5a623;
+
+    margin:8px 0;
+
+    font-size:14px;
+
+}
+
+.stock{
+
+    color:green;
+
+    font-weight:bold;
+
+    margin-top:8px;
+
+}
+
+.actions{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+.voir-produit,
+
+.bouton-produit{
+
+    flex:1;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+.voir-produit{
+
+    background:#f1f1f1;
+
+}
+
+.bouton-produit{
+
+    background:#111;
+
+    color:#fff;
+
+}
