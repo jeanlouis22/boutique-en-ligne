@@ -1,0 +1,503 @@
+* {
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f8f8f8;
+
+    color: #222;
+
+}
+
+/* =========================
+
+   HEADER
+
+========================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 15px 6%;
+
+    background: white;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+}
+
+nav {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+nav a {
+
+    text-decoration: none;
+
+    color: #222;
+
+    font-weight: bold;
+
+}
+
+nav a:hover {
+
+    opacity: 0.6;
+
+}
+
+.panier {
+
+    border: none;
+
+    background: #111;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+}
+
+/* =========================
+
+   ACCUEIL
+
+========================= */
+
+.hero {
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+
+        linear-gradient(
+
+            rgba(0, 0, 0, 0.35),
+
+            rgba(0, 0, 0, 0.35)
+
+        ),
+
+        url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+.hero-contenu {
+
+    max-width: 700px;
+
+}
+
+.petit-titre {
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+.hero h1 {
+
+    font-size: 55px;
+
+    margin: 15px 0;
+
+}
+
+.hero p {
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+.bouton {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 14px 25px;
+
+    background: white;
+
+    color: #111;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+/* =========================
+
+   CATEGORIES
+
+========================= */
+
+.categories {
+
+    padding: 60px 6%;
+
+    text-align: center;
+
+    background: white;
+
+}
+
+.categories h2 {
+
+    font-size: 32px;
+
+}
+
+.categories-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+}
+
+.categories-container button {
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+.categories-container button:hover {
+
+    background: #111;
+
+    color: white;
+
+}
+
+/* =========================
+
+   PRODUITS
+
+========================= */
+
+.produits {
+
+    padding: 70px 6%;
+
+}
+
+.section-titre {
+
+    text-align: center;
+
+}
+
+.section-titre h2 {
+
+    font-size: 35px;
+
+}
+
+.recherche {
+
+    max-width: 600px;
+
+    margin: 35px auto;
+
+}
+
+.recherche input {
+
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    outline: none;
+
+}
+
+.recherche input:focus {
+
+    border-color: #111;
+
+}
+
+.liste-produits {
+
+    display: grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+}
+
+/* =========================
+
+   CARTE PRODUIT
+
+========================= */
+
+.produit {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+
+        0 5px 25px rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.3s ease;
+
+}
+
+.produit:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.produit img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+.produit-info {
+
+    padding: 18px;
+
+}
+
+.produit-info h3 {
+
+    margin: 0 0 8px;
+
+}
+
+.prix {
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+}
+
+.bouton-produit {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #111;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+/* =========================
+
+   CONTACT
+
+========================= */
+
+.contact {
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: white;
+
+}
+
+.contact h2 {
+
+    font-size: 32px;
+
+}
+
+.whatsapp {
+
+    background: #111;
+
+    color: white;
+
+}
+
+/* =========================
+
+   FOOTER
+
+========================= */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #111;
+
+    color: white;
+
+}
+
+/* =========================
+
+   MOBILE
+
+========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+    }
+
+    nav {
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+    .hero {
+
+        min-height: 450px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 38px;
+
+    }
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+    .produits {
+
+        padding: 50px 5%;
+
+    }
+
+    .produit img {
+
+        height: 240px;
+
+    }
+
+}
