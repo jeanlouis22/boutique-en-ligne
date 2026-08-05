@@ -123,12 +123,17 @@ function afficherProduits(liste = produits) {
 
                 <div class="actions">
 
-                    <button class="voir-produit">
+                    <button
 
-                        👁️ Voir
+    class="voir-produit"
 
-                    </button>
+    onclick="voirProduit(${produit.id})"
 
+>
+
+    👁️ Voir
+
+</button>
                     <button
 
                         class="bouton-produit"
