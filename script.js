@@ -402,19 +402,25 @@ contenuPanier.innerHTML += `
 
     <div class="ligne-panier">
 
-        <span>
+    <span>${produit.nom}</span>
 
-            ${produit.nom} × ${produit.quantite}
+    <div>
 
-        </span>
+        <button onclick="modifierQuantite(${produit.id}, -1)">➖</button>
 
-        <strong>
+        <strong>${produit.quantite}</strong>
 
-            ${(produit.prix * produit.quantite).toLocaleString("fr-FR")} FCFA
-
-        </strong>
+        <button onclick="modifierQuantite(${produit.id}, 1)">➕</button>
 
     </div>
+
+    <strong>
+
+        ${(produit.prix * produit.quantite).toLocaleString("fr-FR")} FCFA
+
+    </strong>
+
+</div>
 
 `;
 
