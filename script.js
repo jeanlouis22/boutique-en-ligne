@@ -131,12 +131,17 @@ function afficherProduits(liste = produits) {
 
 >
 
+ <button
+
+    class="voir-produit"
+
+    onclick="voirProduit(${produit.id})"
+
+>
+
     👁️ Voir
 
 </button>
-                    <button
-
-                        class="bouton-produit"
 
                         onclick="ajouterAuPanier(${produit.id})"
 
