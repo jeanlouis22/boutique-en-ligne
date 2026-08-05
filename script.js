@@ -462,4 +462,39 @@ envoyerCommande.addEventListener("click", function () {
 
     );
 
-})
+});
+function voirProduit(id) {
+
+    const produit = produits.find(function(item) {
+
+        return item.id === id;
+
+    });
+
+    document.getElementById("ficheImage").src = produit.image;
+
+    document.getElementById("ficheNom").textContent = produit.nom;
+
+    document.getElementById("fichePrix").textContent =
+
+        produit.prix.toLocaleString("fr-FR") + " FCFA";
+
+    document.getElementById("ficheCategorie").textContent =
+
+        produit.categorie;
+
+    document.getElementById("ficheProduit").style.display = "flex";
+
+    document.getElementById("ficheAjouter").onclick = function() {
+
+        ajouterAuPanier(id);
+
+    };
+
+}
+
+document.getElementById("fermerFiche").addEventListener("click", function() {
+
+    document.getElementById("ficheProduit").style.display = "none";
+
+});
