@@ -177,17 +177,31 @@ function ajouterAuPanier(id) {
 
     }
 
-    panier.push(produit);
+    const existe = panier.find(function(item) {
+
+        return item.id === id;
+
+    });
+
+    if (existe) {
+
+        existe.quantite++;
+
+    } else {
+
+        panier.push({
+
+            ...produit,
+
+            quantite: 1
+
+        });
+
+    }
 
     mettreAJourPanier();
 
-    alert(
-
-        produit.nom +
-
-        " a été ajouté au panier 🛒"
-
-    );
+    alert(produit.nom + " a été ajouté au panier 🛒");
 
 }
 
