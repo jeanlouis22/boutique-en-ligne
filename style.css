@@ -501,3 +501,96 @@ footer {
     }
 
 }
+/* =========================
+
+   FENÊTRE PANIER
+
+========================= */
+
+.fenetre-panier{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,0.6);
+
+    z-index:2000;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.contenu-panier{
+
+    background:#fff;
+
+    width:90%;
+
+    max-width:500px;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    max-height:80vh;
+
+    overflow-y:auto;
+
+    position:relative;
+
+}
+
+.fermer{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+#contenuPanier{
+
+    margin:20px 0;
+
+}
+
+.ligne-panier{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+#totalPanier{
+
+    margin-top:20px;
+
+    text-align:right;
+
+}
