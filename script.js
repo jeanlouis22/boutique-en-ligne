@@ -396,19 +396,27 @@ function afficherPanier() {
 
     panier.forEach(function(produit) {
 
-        total += produit.prix;
+        total += produit.prix * produit.quantite;
 
-        contenuPanier.innerHTML += `
+contenuPanier.innerHTML += `
 
-            <div class="ligne-panier">
+    <div class="ligne-panier">
 
-                <span>${produit.nom}</span>
+        <span>
 
-                <strong>${produit.prix.toLocaleString("fr-FR")} FCFA</strong>
+            ${produit.nom} × ${produit.quantite}
 
-            </div>
+        </span>
 
-        `;
+        <strong>
+
+            ${(produit.prix * produit.quantite).toLocaleString("fr-FR")} FCFA
+
+        </strong>
+
+    </div>
+
+`;
 
     });
 
