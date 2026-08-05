@@ -1,3 +1,4 @@
+
 // =========================
 
 // PRODUITS DE DÉMONSTRATION
@@ -150,7 +151,7 @@ function afficherProduits(liste = produits) {
 
     });
 
-
+}
 
 // =========================
 
