@@ -78,15 +78,7 @@ function afficherProduits(liste = produits) {
 
     if (liste.length === 0) {
 
-        listeProduits.innerHTML = `
-
-            <p style="text-align:center;">
-
-                Aucun produit trouvé.
-
-            </p>
-
-        `;
+        listeProduits.innerHTML = "<p>Aucun produit trouvé.</p>";
 
         return;
 
@@ -100,27 +92,21 @@ function afficherProduits(liste = produits) {
 
         carte.innerHTML = `
 
-            <img
+            <div class="produit-image">
 
-                src="${produit.image}"
+                <img src="${produit.image}" alt="${produit.nom}">
 
-                alt="${produit.nom}"
+                <button class="favori">❤️</button>
 
-            >
+            </div>
 
             <div class="produit-info">
 
-                <h3>
+                <p>${produit.categorie}</p>
 
-                    ${produit.nom}
+                <h3>${produit.nom}</h3>
 
-                </h3>
-
-                <p>
-
-                    ${produit.categorie}
-
-                </p>
+                <div class="note">⭐⭐⭐⭐⭐</div>
 
                 <div class="prix">
 
@@ -128,17 +114,33 @@ function afficherProduits(liste = produits) {
 
                 </div>
 
-                <button
+                <div class="stock">
 
-                    class="bouton-produit"
+                    📦 En stock
 
-                    onclick="ajouterAuPanier(${produit.id})"
+                </div>
 
-                >
+                <div class="actions">
 
-                    🛒 Ajouter au panier
+                    <button class="voir-produit">
 
-                </button>
+                        👁️ Voir
+
+                    </button>
+
+                    <button
+
+                        class="bouton-produit"
+
+                        onclick="ajouterAuPanier(${produit.id})"
+
+                    >
+
+                        🛒 Ajouter
+
+                    </button>
+
+                </div>
 
             </div>
 
@@ -148,7 +150,7 @@ function afficherProduits(liste = produits) {
 
     });
 
-}
+
 
 // =========================
 
